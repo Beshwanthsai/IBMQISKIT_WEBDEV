@@ -8,6 +8,13 @@ export default {
     extend: {
       colors: {
         // IBM Quantum colors
+        quantum: {
+          primary: '#6929c4', // Purple
+          secondary: '#1192e8', // Blue
+          dark: '#161616', // Dark gray/almost black
+          light: '#f4f4f4', // Light gray
+          accent: '#42be65', // Green
+        },
         blue: {
           600: '#1192e8',
         },
