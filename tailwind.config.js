@@ -9,22 +9,20 @@ export default {
       colors: {
         // IBM Quantum colors
         quantum: {
-          primary: '#6929c4', // Purple
-          secondary: '#1192e8', // Blue
-          dark: '#161616', // Dark gray/almost black
-          light: '#f4f4f4', // Light gray
-          accent: '#42be65', // Green
-        },
-        blue: {
-          600: '#1192e8',
-        },
-        purple: {
-          600: '#6929c4',
+          primary: '#6929c4',
+          secondary: '#1192e8',
+          dark: '#161616',
+          light: '#f4f4f4',
+          accent: '#42be65',
         },
       },
       fontFamily: {
         sans: ['IBM Plex Sans', 'sans-serif'],
         mono: ['IBM Plex Mono', 'monospace'],
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },
