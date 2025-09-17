@@ -11,33 +11,64 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Qiskit Fall Fest 2025 Website
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+A responsive website for the Qiskit Fall Fest 2025 event, built with React, Vite, TailwindCSS, and Framer Motion.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Features
+
+- Responsive design that works on all device sizes
+- Beautiful animations powered by Framer Motion
+- Quantum-themed UI
+- Registration button that opens a Google Form in a new tab
+- Various sections: Hero, About, Schedule, Speakers, and more
+
+## Project Structure
+
+We've set up a modular structure that will allow us to build out the website piece by piece:
+
+- `/src/components` - All UI components
+  - `/layout` - Layout components (Header, Footer)
+  - `/common` - Reusable UI components like buttons
+- `/src/pages` - Page components
+- `/src/hooks` - Custom React hooks
+- `/src/utils` - Utility functions
+- `/src/assets` - Images, fonts, and other static assets
+- `/src/styles` - Global styles and theme
+
+## How to Use
+
+1. Clone this repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Customizing the Registration Form
+
+To update the Google Form URL, edit the `RegisterButton.jsx` component:
+
+1. Open `/src/components/common/RegisterButton.jsx`
+2. Replace the `window.open()` URL with your actual Google Form URL:
+   ```javascript
+   window.open('https://forms.google.com/your-actual-form-url-here', '_blank');
+   ```
+
+## Technologies Used
+
+- React - UI library
+- Vite - Build tool
+- TailwindCSS - Styling
+- Framer Motion - Animations
+- React Icons - Icon library
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 

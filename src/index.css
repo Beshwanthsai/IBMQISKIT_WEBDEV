@@ -1,42 +1,83 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base;@tailwind base;
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@tailwind components;@tailwind components;
 
-@layer base {
-  :root {
-    --color-primary: 105 41 196; /* #6929c4 */
-    --color-secondary: 17 146 232; /* #1192e8 */
-    --color-dark: 22 22 22; /* #161616 */
-    --color-light: 244 244 244; /* #f4f4f4 */
-    --color-accent: 66 190 101; /* #42be65 */
+@tailwind utilities;@tailwind utilities;
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+
+
+@layer base {@layer base {
+
+  :root {  :root {
+
+    --color-primary: 105 41 196; /* #6929c4 */    --color-primary: 105 41 196; /* #6929c4 */
+
+    --color-secondary: 17 146 232; /* #1192e8 */    --color-secondary: 17 146 232; /* #1192e8 */
+
+    --color-dark: 22 22 22; /* #161616 */    --color-dark: 22 22 22; /* #161616 */
+
+    --color-light: 244 244 244; /* #f4f4f4 */    --color-light: 244 244 244; /* #f4f4f4 */
+
+    --color-accent: 66 190 101; /* #42be65 */    --color-accent: 66 190 101; /* #42be65 */
+
+        
+
+    font-synthesis: none;    font-synthesis: none;
+
+    text-rendering: optimizeLegibility;    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;    -moz-osx-font-smoothing: grayscale;
+
+  }  }
+
     
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body {
-    @apply bg-white text-quantum-dark min-h-screen font-sans;
-  }
-}
 
-@layer components {
-  .btn-primary {
-    @apply bg-quantum-primary text-white font-medium px-6 py-2 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md;
-  }
-  
-  .btn-secondary {
-    @apply bg-quantum-secondary text-white font-medium px-6 py-2 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md;
-  }
+  body {  body {
 
-  .container-custom {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8;
-  }
+    @apply bg-white min-h-screen font-sans text-gray-900;    @apply bg-white text-quantum-dark min-h-screen font-sans;
 
-  .section-padding {
-    @apply py-12 md:py-20;
-  }
-}
+  }  }
+
+}}
+
+
+
+@layer components {@layer components {
+
+  .btn-primary {  .btn-primary {
+
+    @apply bg-blue-600 text-white font-medium px-6 py-2 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md;    @apply bg-quantum-primary text-white font-medium px-6 py-2 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md;
+
+  }  }
+
+    
+
+  .btn-secondary {  .btn-secondary {
+
+    @apply bg-purple-600 text-white font-medium px-6 py-2 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md;    @apply bg-quantum-secondary text-white font-medium px-6 py-2 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md;
+
+  }  }
+
+
+
+  .container-custom {  .container-custom {
+
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+
+  }  }
+
+
+
+  .section-padding {  .section-padding {
+
+    @apply py-12 md:py-20;    @apply py-12 md:py-20;
+
+  }  }
+
+}}
