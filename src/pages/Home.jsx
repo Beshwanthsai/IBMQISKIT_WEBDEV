@@ -1,21 +1,44 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+// Import image with URL reference to handle spaces in filename
+import fallFestBg from '../assets/2_Fall Fest_LinkedinTwitter_Extension.png';
+import useParallax from '../hooks/useParallax';
+import RegisterButton from '../components/common/RegisterButton';
 
 const Home = () => {
+  const { scrollY, calculateTranslateY } = useParallax();
+  const heroContentRef = useRef(null);
+
+  useEffect(() => {
+    if (heroContentRef.current) {
+      heroContentRef.current.style.transform = `translateY(${calculateTranslateY(0.4)}px)`;
+    }
+  }, [scrollY, calculateTranslateY]);
+
   return (
-    <div className="py-10">
-      {/* Hero Section Placeholder */}
-      <section className="py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Qiskit Fall Fest 2025</h1>
-          <p className="text-xl md:text-2xl mb-8">Join the global celebration of quantum computing</p>
-          <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300">
-            Register Now
-          </button>
+    <div className="py-0">
+      {/* Hero Section with Fixed Background */}
+      <section 
+        className="relative h-screen flex items-center justify-center overflow-hidden hero-background"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
+        <div 
+          ref={heroContentRef}
+          className="container relative z-10 mx-auto px-4 text-center"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white animate-fade-in drop-shadow-lg">
+            Qiskit Fall Fest 2025
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto animate-fade-in-up drop-shadow-md" style={{animationDelay: '0.3s'}}>
+            Join the global celebration of quantum computing and unlock the potential of quantum technology
+          </p>
+          <div className="animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+            <RegisterButton />
+          </div>
         </div>
       </section>
       
       {/* About Section Placeholder */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">About The Event</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center">
@@ -25,7 +48,7 @@ const Home = () => {
       </section>
       
       {/* Schedule Section Placeholder */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Event Schedule</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center">
@@ -35,7 +58,7 @@ const Home = () => {
       </section>
       
       {/* Speakers Section Placeholder */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Featured Speakers</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center">

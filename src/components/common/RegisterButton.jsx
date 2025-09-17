@@ -3,14 +3,14 @@ import React from 'react';
 const RegisterButton = ({ className }) => {
   // This is where we'll add the functionality to open a Google Form in a new tab
   const handleRegisterClick = () => {
-    // Replace with your actual Google Form URL
-    window.open('https://forms.google.com/your-form-url-here', '_blank');
+    // Google Form URL for Qiskit Fall Fest 2025 registration
+    window.open('https://forms.google.com/qiskit-fall-fest-2025-registration', '_blank');
   };
 
   return (
     <button 
       onClick={handleRegisterClick}
-      className={`bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 ${className || ''}`}
+      className={`bg-white text-purple-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg ${className || ''}`}
     >
       Register Now
     </button>

@@ -39,4 +39,12 @@
   .section-padding {
     @apply py-12 md:py-20;
   }
+  
+  .hero-background {
+    background-image: url('./assets/2_Fall\ Fest_LinkedinTwitter_Extension.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 }
